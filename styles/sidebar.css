@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: url("../img/Frame 54.png") var(--background) fixed;
+  background-size: 100px 100px;
+  /* background: linear-gradient(to top, var(--white), var(--background)); */
+}
+nav {
+  font-size: 15px;
+  background-color: var(--white);
+  width: 225px;
+  height: 92.5vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  position: fixed;
+  border-radius: 1rem;
+  transition: 0.15s;
+}
+.top-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.logo {
+  display: flex;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  align-items: center;
+  flex-direction: row;
+}
+.logo h1 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.1rem;
+}
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.nav-links a {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--primary);
+  transition: 0.3s;
+  font-size: 1rem;
+  svg {
+    fill: var(--primary);
+  }
+}
+.nav-links a:hover {
+  background-color: var(--primary);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  transition: 0.3s;
+  font-size: 1rem;
+  svg {
+    fill: var(--white);
+  }
+}
+.profile {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--primary);
+  transition: 0.3s;
+  font-size: 1rem;
+  img {
+    border-radius: 5rem;
+    object-fit: cover;
+  }
+}
+.profile:hover {
+  background-color: var(--primary);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  transition: 0.3s;
+  font-size: 1rem;
+  img {
+    border-radius: 5rem;
+  }
+}
+
+
+
+@media (max-width: 768px) { 
+  nav{
+    width: fit-content;
+    padding: 0.25rem;
+  }
+  .text {
+    display: none; 
+  }
+}

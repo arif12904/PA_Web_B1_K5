@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.profile-container {
+  background-color: var(--white);
+  position: relative;
+  margin-top: 1.5rem;
+  left: 30%;
+  width: 50vw;
+  min-width: 40vw;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  color: var(--black);
+  img {
+    border-radius: 10rem;
+    width: 100;
+    height: 100;
+    object-fit: cover;
+  }
+  p {
+    font-weight: 700;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+.profile-container div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.profile-container div a {
+  width: 100%;
+}
+.profile-container div a .edit {
+  background-color: var(--white);
+  width: 100%;
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary);
+}
+.profile-container div a .logout {
+  width: 100%;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+.modal{
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  padding: 1rem;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.modal.active{
+  visibility: visible;
+}
+
+.modal .content{
+  background-color: var(--white);
+  width: 50%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 12px;
+}
+
+.modal .content .icon{
+  font-size: 3rem;
+}
+
+.modal .content .text{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modal .content .text .title{
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.75rem;
+  color: var(--red);
+}
+
+.modal .content .text .subtitle{
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.action{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.action button{
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  border-radius: 12px;
+  border: none;
+}
+
+.action .cancel{
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+}
+
+
+.action a{
+  width: 100%;
+  color: var(--black);
+}
+.action a .logout{
+  width: 100%;
+  background-color: var(--red);
+  color: var(--white);
+}
+
+@media (max-width: 768px) { 
+  .modal .content{
+    width: 100%;
+  }
+}

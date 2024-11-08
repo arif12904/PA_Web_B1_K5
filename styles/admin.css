@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url("../img/Frame 54.png") var(--background) fixed;
+  background-size: 100px 100px;
+  gap: 1.5rem;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+}
+
+nav .logo{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+nav .logo h1{
+  font-size: 1rem;
+}
+
+nav svg{
+  fill: var(--red);
+}
+.header {
+  margin-top: 6rem;
+  height: 100%;
+  font-size: 3rem;
+  color: var(--primary);
+  letter-spacing: -0.15rem;
+}
+.post-container {
+    background-color: var(--white);
+    width: 60%;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: var(--black);
+  }
+  .post-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  .post-container h1{
+    font-size: 1.5rem;
+    line-height: 1.55rem;
+  }
+  .post-container p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--text);
+  }
+  .post-container .date{
+    font-size: 0.5rem;
+    line-height: 0.55rem;
+  }
+  .post-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .post-header p {
+    color: var(--primary);
+    font-size: 0.75rem;
+  }
+  
+  .post-header svg{
+    fill: var(--black);
+  }
+  .header-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    img {
+      border-radius: 5rem;
+      width: 35px;
+      height: 35px;
+    }
+    .username {
+      color: var(--black);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+
+  .action-button{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .action-button button{
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .action-button .delete-report{
+    background-color: var(--white);
+    border: 1px solid var(--red);
+    outline: none;
+    border-radius: 8px;
+  }
+  .action-button .delete-post{
+    background-color: var(--red);
+    border: none;
+    border-radius: 8px;
+  }
+
+  .modal{
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+  }
+  
+  .modal.active{
+    visibility: visible;
+  }
+  
+  .modal .content{
+    background-color: var(--white);
+    width: 50%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .modal .content .icon{
+    font-size: 3rem;
+  }
+  
+  .modal .content .text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .modal .content .text .title{
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.75rem;
+    color: var(--red);
+  }
+  
+  .modal .content .text .subtitle{
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.5rem;
+  }
+  
+  .action{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+  
+  .action button{
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    border-radius: 12px;
+    border: none;
+  }
+  
+  .action .cancel{
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--primary);
+  }
+  
+  
+  .action a{
+    width: 100%;
+    color: var(--black);
+  }
+  .action a .logout{
+    width: 100%;
+    background-color: var(--red);
+    color: var(--white);
+  }
+
+  @media (max-width: 768px) { 
+    .post-container{
+      width: 100%;
+    }
+    .modal .content{
+      width: 100%;
+    }
+  }

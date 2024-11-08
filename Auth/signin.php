@@ -69,7 +69,7 @@
 <body>
 <body>
     <form action="" method="post">
-        <h2 class="sign-in">Sign In</h2>
+        <h2 class="sign-in">Sign Up</h2>
         <input 
         type="text"
         name="username" 
